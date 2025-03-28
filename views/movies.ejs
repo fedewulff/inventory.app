@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styleActorMovies.css" />
+    <title>Movies</title>
+  </head>
+  <body>
+    <%- include("./partials/navBar.ejs") %>
+    <form action="/movies" method="post">
+      <div>
+        <label for="movieName">Movie name:</label>
+        <input
+          type="text"
+          name="movieName"
+          id="movieName"
+          class="nameInput"
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div>
+        <label for="movieReleaseYear">Year of release:</label>
+        <input
+          type="number"
+          name="movieReleaseYear"
+          id="movieReleaseYear"
+          class="numberInput"
+          autocomplete="off"
+          min="1800"
+          max="<%= new Date().getFullYear() %>"
+          required
+        />
+      </div>
+      <div>
+        <label for="movieActor">Leading role:</label>
+        <select name="movieActor" id="movieActor" class="nameInput" required>
+          <% for (let i = 0; i < actorName.length; i++) { console.log(actorName[i].actor_name )%>
+          <option><%= actorName[i].actor_name %></option>
+          <% } %>
+        </select>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+    <div class="titles">
+      <div>Movie name</div>
+      <div>Year of release</div>
+      <div>Leading role</div>
+    </div>
+    <% for (let i=0; i < movieData.length; i++) { %>
+    <div class="threeColumnData">
+      <div><%= movieData[i].movie_name %></div>
+      <div><%= movieData[i].movie_year_of_release %></div>
+      <div><%= movieData[i].leading_role%></div>
+    </div>
+    <% } %>
+  </body>
+</html>

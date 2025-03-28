@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: lightcoral;
+}
+
+.navbar {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  gap: 4rem;
+}
+
+a {
+  text-decoration: none;
+  color: green;
+  font-size: 2.5rem;
+}
+
+form {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  background: lightblue;
+  width: 85%;
+  margin: auto;
+}
+
+.numberInput {
+  width: 5rem;
+  text-align: center;
+}
+.nameInput {
+  max-width: 20rem;
+  min-width: 10rem;
+  text-align: center;
+}
+
+input,
+label,
+select,
+form button {
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+button {
+  cursor: pointer;
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  outline: 2px solid red;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.threeColumnData,
+.titles {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  width: 85%;
+  background: lightgreen;
+  margin: 0.5rem auto;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.titles {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bolder;
+}
+
+.threeColumnData div,
+.titles div {
+  text-align: center;
+  overflow-wrap: anywhere;
+}

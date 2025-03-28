@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styleActorMovies.css" />
+    <title>Actor / Actress</title>
+  </head>
+  <body>
+    <%- include('./partials/navBar.ejs') %>
+    <form action="/actors" method="post">
+      <div>
+        <label for="actorName">Name:</label>
+        <input
+          type="text"
+          name="actorName"
+          id="actorName"
+          class="nameInput"
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div>
+        <label for="actorAge">Age:</label>
+        <input
+          type="number"
+          name="actorAge"
+          id="actorAge"
+          class="numberInput"
+          autocomplete="off"
+          min="0"
+          max="150"
+          required
+        />
+      </div>
+      <div>
+        <label for="actorOscars">Oscars:</label>
+        <input
+          type="number"
+          name="actorOscars"
+          id="actorOscars"
+          class="numberInput"
+          min="0"
+          max="99"
+          autocomplete="off"
+        />
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="titles">
+      <div>Actor / actress</div>
+      <div>Age</div>
+      <div>Oscars</div>
+    </div>
+    <% for (let i=0; i < actorData.length; i++) {%>
+    <div class="threeColumnData">
+      <div><%= actorData[i].actor_name %></div>
+      <div><%= actorData[i].actor_age %></div>
+      <div><%= actorData[i].actor_oscars %></div>
+    </div>
+    <% } %>
+  </body>
+</html>

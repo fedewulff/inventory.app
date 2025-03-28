@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: lightcoral;
+}
+
+.navbar {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  gap: 4rem;
+
+  font-size: 2.5rem;
+}
+.navbar a {
+  color: green;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fiveColumnData {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 1fr 1fr 3fr 1fr;
+  width: 85%;
+  padding: 0.5rem 2rem;
+  background: lightgreen;
+  margin: 0.5rem auto;
+}
+
+.titles {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bolder;
+}
+
+.fiveColumnData div {
+  text-align: center;
+  overflow-wrap: anywhere;
+  border: 1px solid black;
+}

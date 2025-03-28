@@ -1,3 +1,32 @@
-<div>home</div>
-<a href="/actor">actor</a>
-<a href="/movie">movie</a>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styleHome.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <%- include('./partials/navBar.ejs') %>
+
+    <div class="fiveColumnData titles">
+      <div>Actor / actress</div>
+      <div>Age</div>
+      <div>Oscars</div>
+      <div>Movie name</div>
+      <div>Movie release year</div>
+    </div>
+
+    <% for (let i=0; i < allData.length; i++) {%>
+    <a href="/profile/<%= allData[i].id %>">
+      <div class="fiveColumnData">
+        <div><%= allData[i].actor_name %></div>
+        <div><%= allData[i].actor_age %></div>
+        <div><%= allData[i].actor_oscars %></div>
+        <div><%= allData[i].movie_name %></div>
+        <div><%= allData[i].movie_year_of_release %></div>
+      </div>
+    </a>
+    <% } %>
+  </body>
+</html>

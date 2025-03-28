@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styleIndData.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <%- include('./partials/navBar.ejs') %>
+    <div class="actorData">
+      <div>
+        <div>Actor / actress:</div>
+        <div><%= profile.actor_name %></div>
+      </div>
+      <div>
+        <div>Age:</div>
+        <div><%= profile.actor_age %></div>
+      </div>
+      <div>
+        <div>Oscars:</div>
+        <div><%= profile.actor_oscars %></div>
+      </div>
+      <div>
+        <div>Movie:</div>
+        <div><%= profile.movie_name %></div>
+      </div>
+      <div>
+        Movie year of release
+        <div><%= profile.movie_year_of_release %></div>
+      </div>
+      <a href="/profile/<%= profile.id %>/update"><button>Update</button></a>
+      <a href="/profile/<%= profile.id %>/delete"><button>Delete</button></a>
+    </div>
+  </body>
+</html>
