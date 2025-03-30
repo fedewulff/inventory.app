@@ -10,27 +10,27 @@
     <%- include('./partials/navBar.ejs') %>
     <div class="actorData">
       <div>
-        <div>Actor / actress:</div>
+        <h3>Actor / actress:</h3>
         <div><%= profile.actor_name %></div>
       </div>
       <div>
-        <div>Age:</div>
+        <h3>Age:</h3>
         <div><%= profile.actor_age %></div>
       </div>
       <div>
-        <div>Oscars:</div>
+        <h3>Oscars:</h3>
         <div><%= profile.actor_oscars %></div>
       </div>
       <div>
-        <div>Movie:</div>
+        <h3>Movie:</h3>
         <div><%= profile.movie_name %></div>
       </div>
       <div>
-        Movie year of release
+        <h3>Movie year of release:</h3>
         <div><%= profile.movie_year_of_release %></div>
       </div>
-      <a href="/profile/<%= profile.id %>/update"><button>Update</button></a>
-      <a href="/profile/<%= profile.id %>/delete"><button>Delete</button></a>
+      <a href="/profile/<%= profile.id %>/update">Update</a>
+      <a href="/profile/<%= profile.id %>/delete">Delete</a>
     </div>
   </body>
 </html>

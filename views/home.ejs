@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styleHome.css" />
     <title>Home</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+    </style>
   </head>
   <body>
     <%- include('./partials/navBar.ejs') %>
@@ -19,7 +22,7 @@
 
     <% for (let i=0; i < allData.length; i++) {%>
     <a href="/profile/<%= allData[i].id %>">
-      <div class="fiveColumnData">
+      <div class="fiveColumnData personInfo">
         <div><%= allData[i].actor_name %></div>
         <div><%= allData[i].actor_age %></div>
         <div><%= allData[i].actor_oscars %></div>

@@ -2,62 +2,91 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Funnel Display", sans-serif;
 }
 
 body {
-  background: lightcoral;
+  background: #fffff7;
 }
 
 .navbar {
   display: flex;
   padding: 1rem;
   justify-content: center;
-  gap: 4rem;
+  gap: 9rem;
+  margin: 0.5rem 0 1.75rem;
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+.navbar a {
+  color: #2b547e;
 }
 
 a {
   text-decoration: none;
-  color: green;
-  font-size: 2.5rem;
+  border-radius: 0.5rem;
 }
 
+.newActorMovieForm {
+  color: #2b547e;
+  font-size: 1rem;
+  margin-left: 7.5%;
+}
 form {
   display: flex;
-  padding: 1rem;
+  padding: 1.5rem 0;
   justify-content: space-around;
   align-items: center;
-  background: lightblue;
+  background: #fffff7;
+  border: 0.25rem solid #2b547e;
   width: 85%;
-  margin: auto;
+  margin: 0 auto 3rem;
+  border-radius: 0.5rem;
 }
 
 .numberInput {
   width: 5rem;
   text-align: center;
+  background: #2b547e;
+  color: #fffff7;
 }
 .nameInput {
   max-width: 20rem;
   min-width: 10rem;
   text-align: center;
+  background: #2b547e;
+  color: #fffff7;
 }
 
 input,
 label,
-select,
-form button {
+select {
   font-size: 1.25rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
   border: none;
+  color: #2b547e;
 }
 button {
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
   cursor: pointer;
+  background: #fffff7;
+  border: 0.25rem solid #2b547e;
+  color: #2b547e;
+  transition: 0.3s;
 }
-
+button:hover {
+  background: #12e193;
+}
+a:focus-visible,
 input:focus-visible,
-select:focus-visible,
+select:focus-visible {
+  outline: 0.25rem solid #12e193;
+}
 button:focus-visible {
-  outline: 2px solid red;
+  background: #12e193;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -65,25 +94,40 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.threeColumnData,
 .titles {
+  padding: 1.75rem 0.5rem;
+  margin: 2rem auto;
+  font-weight: 600;
+  background: #2b547e;
+  color: #fffff7;
+  box-shadow: 0 3px 3px #3a3b3c;
+}
+
+.threeColumnData {
   display: grid;
+  align-items: center;
   grid-template-columns: 2fr 1fr 2fr;
   width: 85%;
-  background: lightgreen;
-  margin: 0.5rem auto;
-  align-items: center;
-  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
-.titles {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: bolder;
-}
-
-.threeColumnData div,
-.titles div {
+.threeColumnData div {
   text-align: center;
   overflow-wrap: anywhere;
+  font-size: 1.75rem;
+}
+
+.personInfo {
+  transition: 0.4s;
+  box-shadow: 0 5px 10px #3a3b3c;
+  padding: 0.5rem;
+  background: #fffff7;
+  margin: 1rem auto;
+}
+.personInfo:hover {
+  transform: scale(1.025);
+}
+.personInfo div {
+  color: #2b547e;
+  font-weight: 300;
 }

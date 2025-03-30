@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../styleActorMovies.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+    </style>
     <title>Actor / Actress</title>
   </head>
   <body>
     <%- include('./partials/navBar.ejs') %>
+    <div class="newActorMovieForm">Add new actor/actress</div>
     <form action="/actors" method="post">
       <div>
         <label for="actorName">Name:</label>
@@ -17,6 +21,8 @@
           id="actorName"
           class="nameInput"
           autocomplete="off"
+          minlength="2"
+          maxlength="70"
           required
         />
       </div>
@@ -28,8 +34,6 @@
           id="actorAge"
           class="numberInput"
           autocomplete="off"
-          min="0"
-          max="150"
           required
         />
       </div>
@@ -48,14 +52,14 @@
 
       <button type="submit">Submit</button>
     </form>
-
-    <div class="titles">
+    <%- include("./partials/formError.ejs") %>
+    <div class="threeColumnData titles">
       <div>Actor / actress</div>
       <div>Age</div>
       <div>Oscars</div>
     </div>
     <% for (let i=0; i < actorData.length; i++) {%>
-    <div class="threeColumnData">
+    <div class="threeColumnData personInfo">
       <div><%= actorData[i].actor_name %></div>
       <div><%= actorData[i].actor_age %></div>
       <div><%= actorData[i].actor_oscars %></div>

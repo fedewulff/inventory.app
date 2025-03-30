@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styleActorMovies.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+    </style>
     <title>Movies</title>
   </head>
   <body>
     <%- include("./partials/navBar.ejs") %>
+
+    <div class="newActorMovieForm">Add new movie</div>
     <form action="/movies" method="post">
       <div>
         <label for="movieName">Movie name:</label>
@@ -44,13 +49,13 @@
 
       <button type="submit">Submit</button>
     </form>
-    <div class="titles">
+    <div class="threeColumnData titles">
       <div>Movie name</div>
       <div>Year of release</div>
       <div>Leading role</div>
     </div>
     <% for (let i=0; i < movieData.length; i++) { %>
-    <div class="threeColumnData">
+    <div class="threeColumnData personInfo">
       <div><%= movieData[i].movie_name %></div>
       <div><%= movieData[i].movie_year_of_release %></div>
       <div><%= movieData[i].leading_role%></div>

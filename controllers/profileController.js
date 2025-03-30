@@ -9,19 +9,15 @@ async function getProfileData(req, res) {
   }
 }
 
-async function getDeleteMessage(req, res) {
-  res.render("deleteProfile");
-}
+// async function getDeleteMessage(req, res) {
+//   console.log(`get: ${req.params.id}`);
+//   res.end();
+// }
 
-async function deleteProfile(req, res) {
-  console.log(123);
-  const id = req.params.id;
-  console.log(typeof id);
-  // await db.deleteProfile(id);
-}
+// async function deleteProfile(req, res) {
+//   console.log(`delete: ${req.params.id}`);
+// }
 
 module.exports = {
   getProfileData,
-  getDeleteMessage,
-  deleteProfile,
 };
